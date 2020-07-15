@@ -1,0 +1,12 @@
+<h1>The Albums</h1>
+{% extends "base.html" %}
+{% block content %}
+{% for album in albums  %} 
+<h2>{{album.title}}</h2>
+<h3>{{album.artist}}</h3>
+<h3>{{album.genre}}</h3>
+<h3>{{album.year_released}}</h3>
+
+{% endfor %}
+
+{% endblock %}
