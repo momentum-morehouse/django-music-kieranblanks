@@ -1,12 +1,26 @@
-<h1>The Albums</h1>
 {% extends "base.html" %}
-{% block content %}
-{% for album in albums  %} 
-<h2>{{album.title}}</h2>
-<h3>{{album.artist}}</h3>
-<h3>{{album.genre}}</h3>
-<h3>{{album.year_released}}</h3>
 
-{% endfor %}
+{% block content %}
+
+<div id = "all-Albums">
+    <h1>The Albums</h1>
+    {% for album in albums  %} 
+
+    <div class="album-details">
+        <h2>{{album.title}}</h2>
+        <h3>{{album.artist}}</h3>
+        <h3>{{album.genre}}</h3>
+        <h3>{{album.year_released}}</h3>
+    </div>
+
+    <div class = "comments">
+        {{form.as_p}}
+    
+    </div>
+
+    {% endfor %}
+
+</div>
+
 
 {% endblock %}
